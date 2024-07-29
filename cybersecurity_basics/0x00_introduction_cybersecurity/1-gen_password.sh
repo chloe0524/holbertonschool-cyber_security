@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /dev/urandom | tr -dc '[:alnum:]'| head -c $1
+openssl rand -base64 48 | tr -dc '[:alnum:]' | head -c $1 | sed 's/$/\n/'
