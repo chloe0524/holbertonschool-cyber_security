@@ -1,2 +1,3 @@
 #!/bin/bash
-head -c "$1" /dev/urandom | tr -dc '[:alnum:]'
+pass=$(head -c "$1" /dev/urandom | tr -dc '[:alnum:]')
+echo "$pass"
