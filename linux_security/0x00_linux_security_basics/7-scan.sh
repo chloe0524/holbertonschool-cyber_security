@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo nmap -sn
+sudo nmap -sn | grep "$1"
