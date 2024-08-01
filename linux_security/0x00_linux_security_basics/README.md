@@ -1,7 +1,5 @@
 # Linux Security Basics
 
-Welcome to the Linux Security Basics project! This repository contains a series of Bash scripts that help you understand and manage basic security aspects of a Linux system.
-
 ## Table of Contents
 
 - [Linux Security Basics](#linux-security-basics)
@@ -81,5 +79,3 @@ Write a bash script that scans a subnetwork to discover live hosts.
 
 - **GitHub Repository**: [holbertonschool-cyber_security](https://github.com/holbertonschool-cyber_security)
 - **Directory**: `linux_security/0x00_linux_security_basics`
-
-Each script is designed to enhance your understanding of Linux security fundamentals. Happy learning and coding!
