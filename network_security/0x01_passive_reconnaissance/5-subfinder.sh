@@ -1,2 +1,2 @@
 #!/bin/bash
-subfinder -silent -d $1 -o $1.txt -nW -oI -recursive -timeout 15
+subfinder -silent -d $1 -o $1.txt -nW -oI
