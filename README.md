@@ -1,5 +1,11 @@
 # 🔒 Cybersecurity Basics
 
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white)
+![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
+
 Welcome to the **Cybersecurity Basics** repository! This repository contains several projects such as `Introduction to Cyber Security`, `Networking Introduction`, and `Linux Security Basics`. Each project is designed to introduce fundamental concepts in cybersecurity. Below is an overview of the key topics covered in each project.
 
 ## Projects Overview
