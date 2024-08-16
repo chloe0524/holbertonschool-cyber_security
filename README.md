@@ -20,6 +20,9 @@ Welcome to the **Cybersecurity Basics** repository! This repository contains sev
 - **MAC Addressing:** Understand the role of MAC addresses in network communication and their place within the OSI model.
 - **IP Addressing:** Explore IPv4 and IPv6 addressing schemes.
 
+  ![image](https://github.com/user-attachments/assets/54f42382-c431-498a-b4b9-333c4ad2d921)
+
+
 ### &#8618; 3. Linux Security Basics
 
 - **Login Session Tracking:** Learn how to monitor and analyze user login sessions on a Linux system.
