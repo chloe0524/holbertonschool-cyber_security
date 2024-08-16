@@ -4,7 +4,7 @@ Welcome to the **Cybersecurity Basics** repository! This repository contains sev
 
 ## Projects Overview
 
-### 1. Introduction to Cyber Security
+### &#8618; 1. Introduction to Cyber Security
 
 - **System Identification:** Learn how to identify the system's distributor ID using basic Bash scripting.
 - **Password Security:** Understand the importance of strong passwords and learn how to generate them using scripts.
@@ -12,7 +12,7 @@ Welcome to the **Cybersecurity Basics** repository! This repository contains sev
 - **SSH Key Management:** Discover the process of generating and managing SSH key pairs for secure remote access.
 - **Process Monitoring:** Understand how to monitor system processes, particularly those initiated by the root user, and filter relevant data.
 
-### :arrow_down: :arrow_right: 2. Networking Introduction
+### &#8618; 2. Networking Introduction
 
 - **OSI Model:** Gain an understanding of the OSI model.
 - **Network Protocols:** Explore various network protocols (e.g., TCP, UDP, IPv4, IPv6) and their roles in networking.
@@ -20,7 +20,7 @@ Welcome to the **Cybersecurity Basics** repository! This repository contains sev
 - **MAC Addressing:** Understand the role of MAC addresses in network communication and their place within the OSI model.
 - **IP Addressing:** Explore IPv4 and IPv6 addressing schemes.
 
-### :arrow_down: :arrow_right: 3. Linux Security Basics
+### &#8618; 3. Linux Security Basics
 
 - **Login Session Tracking:** Learn how to monitor and analyze user login sessions on a Linux system.
 - **Network Socket Monitoring:** Understand how to list and analyze active network socket connections using Linux commands.
