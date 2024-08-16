@@ -5,6 +5,7 @@
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
+![OpenVPN](https://img.shields.io/badge/OpenVPN-3EAAE0?style=for-the-badge&logo=openvpn&logoColor=white)
 ![Cybersecurity](https://img.shields.io/badge/Cybersecurity-007BFF?style=for-the-badge&logo=security&logoColor=white)
 
 Welcome to the **Cybersecurity Basics** repository! This repository contains several projects such as `Introduction to Cyber Security`, `Networking Introduction`, and `Linux Security Basics`. Each project is designed to introduce fundamental concepts in cybersecurity. Below is an overview of the key topics covered in each project.
