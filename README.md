@@ -1,4 +1,4 @@
-# 🔒: Cybersecurity Basics
+# 🔒 Cybersecurity Basics
 
 Welcome to the **Cybersecurity Basics** repository! This repository contains several projects such as `Introduction to Cyber Security`, `Networking Introduction`, and `Linux Security Basics`. Each project is designed to introduce fundamental concepts in cybersecurity. Below is an overview of the key topics covered in each project.
 
