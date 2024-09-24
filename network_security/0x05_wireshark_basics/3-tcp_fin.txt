@@ -1,1 +1,1 @@
-tcp.flags.fin == 1 and tcp.window_size <= 1024
+tcp.flags.fin == 0x001 and tcp.window_size <= 1024
