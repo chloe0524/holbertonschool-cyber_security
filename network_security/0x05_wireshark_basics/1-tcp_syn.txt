@@ -1,1 +1,1 @@
-ip.proto == 6
+tcp.flags.syn == 1
