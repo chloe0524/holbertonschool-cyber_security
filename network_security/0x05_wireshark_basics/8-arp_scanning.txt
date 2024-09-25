@@ -1,1 +1,1 @@
-arp.dst.hw_mac
+arp.dst.hw_mac == 0
