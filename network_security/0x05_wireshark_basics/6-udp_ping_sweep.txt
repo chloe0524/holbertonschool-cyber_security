@@ -1,1 +1,1 @@
-icmp.type == 8 && icmp.code == 0 && udp.dstport
+icmp.type == 7 && icmp.code == 0 && udp.dstport
