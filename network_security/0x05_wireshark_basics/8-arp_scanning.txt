@@ -1,1 +1,1 @@
-arp.dst.hw_mac == 0
+arp.dst.hw_mac == 00:00:00:00:00:00
