@@ -1,0 +1,2 @@
+GET /ticket?id=2 HTTP/1.1
+Host: web0x00.hbtn
