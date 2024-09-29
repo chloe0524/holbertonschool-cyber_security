@@ -1,3 +1,3 @@
 GET /ticket?id=2 HTTP/1.1
-HOST: web0x00.hbtn
+Host: web0x00.hbtn
 COOKIE: .eJxFyksKgCAURuG9_GMJmzoqWkIrULyR4AuvUhDtPaGBw_NxHqw2uMhQh_ZMAlvjmgKVIXvLOZXaoZbWm4J2Hgr8-3KRkbeU02lqhICzULNAYypRBxoj3g8vsSW4.Zvlg9Q.zNmyQCk8LI4r4BkOllNoiL9SSzM
