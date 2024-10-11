@@ -1,13 +1,14 @@
 #!/bin/bash
 
-password="${1#'{xor}'}"
-decoded_password=$(echo -n "$password" | openssl enc -base64 -d)
+input="$1"
+input="${input#'{xor}'}"
+decoded=$(echo -n "$input" | openssl enc -base64 -d)
+res=""
 
-echo -n "$decoded_password" | awk '{
-    for (i = 1; i <= length; i++) {
-        printf("%c", ord(substr($0, i, 1)) ^ 95)
-    }
-}
-function ord(c) {
-    return sprintf("%d", c)
-}'
+for ((index = 0; index < ${#decoded}; index++)); do
+    character="${decoded:$index:1}"
+    xor_res=$(( $(printf "%d" "'$character") ^ 95 ))
+    res+=$(printf "\\$(printf '%03o' $xor_res)")
+done
+
+echo "$res"
