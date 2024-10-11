@@ -1,14 +1,13 @@
 #!/bin/bash
+sliced_password=${1#"{xor}"};
+decoded_base64=$(echo "$sliced_password" | base64 --decode);
+decoded_password=""
 
-input="$1"
-input="${input#'{xor}'}"
-decoded=$(echo -n "$input" | openssl enc -base64 -d)
-res=""
-
-for ((index = 0; index < ${#decoded}; index++)); do
-    character="${decoded:$index:1}"
-    xor_res=$(( $(printf "%d" "'$character") ^ 95 ))
-    res+=$(printf "\\$(printf '%03o' $xor_res)")
+for ((i=0; i<${#decoded_base64}; i++)); do  
+	char=${decoded_base64:i:1}
+	ascii_value=$(printf "%d" "'$char'")
+	xor_value=$((ascii_value ^ 95))
+	xor_char=$(printf "\\$(printf '%03o' "$xor_value")")
+	decoded_password+="$xor_char"
 done
-
-echo "$res"
+echo "$decoded_password"
