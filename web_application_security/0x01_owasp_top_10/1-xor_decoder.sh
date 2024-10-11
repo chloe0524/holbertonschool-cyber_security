@@ -1,13 +1,12 @@
 #!/bin/bash
-psswd=${1#"{xor}"};
-decod=$(echo "$psswd" | base64 --decode);
-res=""
-
-for ((i=0; i<${#decod}; i++)); do  
-    current_char=${decod:i:1}
-    char_ascii_value=$(printf "%d" "'$current_char'")
-    xor_result=$((char_ascii_value ^ 95))
-    xor_character=$(printf "\\$(printf '%03o' "$xor_result")")
-    res+="$xor_character"
+sliced_password=${1#"{xor}"};
+decoded_base64=$(echo "$sliced_password" | base64 --decode);
+decoded_password=""
+for ((i=0; i<${#decoded_base64}; i++)); do
+	char=${decoded_base64:i:1}
+	ascii_value=$(printf "%d" "'$char'")
+	xor_value=$((ascii_value ^ 95))
+	xor_char=$(printf "\\$(printf '%03o' "$xor_value")")
+	decoded_password+="$xor_char"
 done
-echo "$res"
+echo "$decoded_password"w
