@@ -1,4 +1,5 @@
 #!/bin/bash
+
 sliced_password=${1#"{xor}"};
 decoded_base64=$(echo "$sliced_password" | base64 --decode);
 decoded_password=""
@@ -9,4 +10,4 @@ for ((i=0; i<${#decoded_base64}; i++)); do
 	xor_char=$(printf "\\$(printf '%03o' "$xor_value")")
 	decoded_password+="$xor_char"
 done
-echo "$decoded_password"w
+echo "$decoded_password"
