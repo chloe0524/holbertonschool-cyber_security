@@ -63,15 +63,3 @@ Crack a hash using the combination of two wordlists with Hashcat.
 - Use lowercase for cryptographic algorithm names like `sha256`.  
 
 ---
-
-## **Resources**  
-- **Tools and References**:  
-  - [OpenSSL](https://www.openssl.org/)  
-  - [John the Ripper](https://www.openwall.com/john/)  
-  - [Hashcat](https://hashcat.net/hashcat/)  
-  - [RockYou Wordlist](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)  
-
-For more details, visit the project repository:  
-[GitHub Repository](https://github.com/holbertonschool-cyber_security)  
-
----  
