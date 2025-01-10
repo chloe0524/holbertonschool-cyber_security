@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo groupadd "$1"
+sudo addgroup "$1"
 sudo chown :"$1" "$2"
-sudo chmod g+rw "$2"
+sudo chmod g+rx "$2"
