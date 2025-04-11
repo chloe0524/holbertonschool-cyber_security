@@ -1,2 +1,2 @@
 #!/bin/bash
-grep "Accepted" auth.log | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort -u | wc -l
+grep "sshd" auth.log |  awk '{ for (i=1; i<NF; i++) if (index($i, "from") ) print $(i+1) }' | awk '!seen[$0]++' | head -n 18 | wc -l
