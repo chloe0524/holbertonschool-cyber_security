@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -E "firewall|iptables" auth.log | grep -c "add"
+grep "COMMAND=/sbin/iptables -A" auth.log | wc -l
