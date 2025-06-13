@@ -1,79 +1,50 @@
 #!/usr/bin/env ruby
+
 require 'optparse'
-require 'fileutils'
 
-TASKS_FILE = 'tasks.txt'
+file = 'tasks.txt'
 
-# Initialize tasks file if it doesn't exist
-FileUtils.touch(TASKS_FILE)
+OptionParser.new do |op|
+  op.banner  = 'Usage: cli.rb [options]'
 
-def load_tasks
-  File.readlines(TASKS_FILE).map(&:chomp)
-end
 
-def save_tasks(tasks)
-  File.write(TASKS_FILE, tasks.join("\n"))
-end
-
-def add_task(task)
-  tasks = load_tasks
-  tasks << task
-  save_tasks(tasks)
-  puts "Task '#{task}' added."
-end
-
-def list_tasks
-  tasks = load_tasks
-  if tasks.empty?
-    puts "No tasks found."
-  else
-    tasks.each_with_index do |task, index|
-      puts "#{index + 1}. #{task}"
+  op.on("-a", "--add TASK", "Add a new task") do |task|
+    File.open(file, 'a') do |file|
+      file.puts(task)
     end
+    puts "Task '#{task}' added."
   end
-end
 
-def remove_task(index)
-  tasks = load_tasks
-  index = index.to_i - 1
-  
-  if index >= 0 && index < tasks.length
-    task = tasks.delete_at(index)
-    save_tasks(tasks)
-    puts "Task '#{task}' removed."
-  else
-    puts "Invalid task index."
+  op.on("-l", "--list", "List all tasks") do
+    i = 1
+    array = File.readlines(file)
+    puts "Tasks:"
+    array.each do |line|
+      word = line.chomp!
+      puts "#{i}. #{word}"
+      i += 1
+    end 
   end
-end
 
-options = {}
-OptionParser.new do |opts|
-  opts.banner = "Usage: cli.rb [options]"
-  
-  opts.on("-a", "--add TASK", "Add a new task") do |task|
-    options[:add] = task
+
+  op.on("-r", "--remove INDEX", "Remove a task by index") do |indx|
+
+    index = indx.to_i - 1
+    array = File.readlines(file)
+    rm_task = array[index].chomp!
+    array.delete_at(index)
+    File.open(file, 'w') do |file|
+      array.each do |task|
+        file.puts(task)
+      end
+    end
+    puts "Task '#{rm_task}' removed."
   end
-  
-  opts.on("-l", "--list", "List all tasks") do
-    options[:list] = true
-  end
-  
-  opts.on("-r", "--remove INDEX", "Remove a task by index") do |index|
-    options[:remove] = index
-  end
-  
-  opts.on("-h", "--help", "Show help") do
-    puts opts
+
+
+  op.on("-h", "--help", "Show help") do
+    puts op
     exit
   end
-end.parse!
 
-if options[:add]
-  add_task(options[:add])
-elsif options[:list]
-  list_tasks
-elsif options[:remove]
-  remove_task(options[:remove])
-else
-  puts "No action specified. Use -h for help."
-end 
+end.parse!
